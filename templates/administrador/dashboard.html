@@ -1,0 +1,711 @@
+
+<?php include '../layout/header.php';
+
+
+?>
+
+ {% load static %}
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="{% static 'layout/vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/vendors/font-awesome/css/font-awesome.min.css' %}">    
+    <link rel="stylesheet" href="{% static 'layout/vendors/nprogress/nprogress.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/vendors/iCheck/skins/flat/green.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/plugins/datatables/dataTables.bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'layout/vendors/jqvmap/dist/jqvmap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/vendors/bootstrap-daterangepicker/daterangepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/build/css/custom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/js/jquery.js' %}">
+    <link rel="stylesheet" href="{% static 'layout/js/chartJS/Chart.min.js' %}">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CELULARES TUSOLUTIONWEB</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+  <style>
+     h5,h6{
+        text-align:center;
+      }
+    
+
+      @media print {
+          .btn-print {
+            display:none !important;
+      }
+      .main-footer  {
+      display:none !important;
+      }
+      .box.box-primary {
+        border-top:none !important;
+      }
+      .nav_menu {
+        display:none;
+      }
+      footer{
+        display:none;
+      }
+      
+          
+      }
+  
+  </style>
+  
+
+
+    <link rel="stylesheet" href="{% static 'layout/plugins/datatables/dataTables.bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/dist/css/AdminLTE.min.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/plugins/select2/select2.min.css' %}">
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'layout/dist/css/skins/_all-skins.min.css' %}">
+
+
+  
+<style type="text/css">
+  .site-title{
+    display: inline;
+    font-size:17px;
+    line-height: 135px;
+    height: 75px;
+    margin-bottom: -5%;
+    width: 70%;
+
+  }
+</style>
+  <body class="nav-md">
+
+    <div class="container body">
+      <div class="main_container">
+        <?php include '../layout/main_sidebar.php';?>
+ <div class="col-md-3 left_col">
+          <div class="left_col scroll-view" style="z-index: inherit;">
+            <div class="navbar nav_title fondo1" style="border: 0;">
+              <img src="{% static 'img/iconos/admin1.png' %}" class="img-responsive" style="width: 15%;margin-left: 5%;display: inline-block;">
+              <a href="#" class="site_title" style="width: 70%;display: inline"> <span style="color:white;font-size: 17px">Administracion</span></a>
+            </div>
+
+           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+
+           
+                  </a>
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+                   <div class="profile clearfix">
+              <div >
+
+<img src="{% static 'img/iconos/abajo.png' %}" style="width: 100%;transform: rotate(-180deg);position: absolute;z-index: -1" class="img-responsive">
+
+                <center>
+                  <img src="{%static 'img/logo_blanco.png'%}" alt="..." class="img-responsive" style="width: 75%;z-index: 1;padding-top: 1vh">                 
+                </center>
+              </div>
+              <div class="profile_info">
+               
+               
+              </div>
+            </div>
+
+            <!-- /menu profile quick info -->
+
+
+
+            <!-- sidebar menu -->
+            <?php include 'sidebar.php';?>
+
+<?php 
+$id=$_SESSION['id'];
+?>
+
+<?php
+
+?>
+
+<style type="text/css">
+  .img-nav{
+    width: 35px;
+  }
+</style>
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3><?php echo $empresa;?></h3>
+                <ul class="nav side-menu">
+                      <li><a href = "{% url 'dashboard' %}"><img src="{% static 'img/iconos/inicio.png' %}" class="img-nav"> Inicio <span class="fa fa-chevron-right"></span></a></li>
+        
+   <li><a href = "../layout/caja.php"><img src="{% static 'img/iconos/caja_icono.png' %}" class="img-nav"> Caja <span class="fa fa-chevron-right"></span></a>
+                 <li><a><img src="{% static 'img/iconos/usuarios.png' %}" class="img-nav"> Usuarios<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+
+                      <li><a href="{% url 'clientes' %}">Usuarios</a></li>
+
+                                  <li><a href="../usuario/usuario_agregar.php">Agregar</a></li> 
+
+                    </ul>
+                  </li>
+  </li>
+
+                                          <li><a><img src="{% static 'img/iconos/clientes.png' %}" class="img-nav"> Cliente<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+
+                      <li><a href="{% url 'clientes' %}">Mostrar</a></li>
+   <li><a href="../cliente/cliente_agregar.php">Agregar</a></li>
+                       
+
+                    </ul>
+                  </li>
+
+
+
+                 <li><a><img src="{% static 'img/iconos/medicamento.png' %}" class="img-nav">Medicamentos<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+
+                      <li><a href="{% url 'medicamentos' %}">Medicamentos</a></li>
+
+
+
+                    </ul>
+                  </li>
+
+
+
+                 <li><a><img src="{% static 'img/iconos/estadisticas.png' %}" class="img-nav"> Ventas<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+
+                      <li><a href="{% url 'clientes' %}">Usuarios</a></li>
+
+                                  <li><a href="../usuario/usuario_agregar.php">Agregar</a></li> 
+
+                    </ul>
+                  </li>
+
+ 
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+
+ <div class="sidebar-footer hidden-small">
+              
+
+ </div>
+
+
+           <?php include 'sidebar2.php';?>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+
+
+
+        <!-- top navigation -->
+       
+
+
+
+
+
+
+ <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                         <li class="">
+                  <a href="javascript:;" class=" dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="{%static 'img/iconos/iconoclinitec.png'%}" alt=""><?php echo $nombre; ?>
+
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+
+              
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                
+                    <li><a href="../layout/logout.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesion</a></li>
+
+                  </ul>
+
+                </li>   
+
+                     <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>
+         <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="{% static 'img/iconos/iconocaja.png'%}" alt="">CAJA
+
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                          <?php
+                          if ($caja_cont==0) {
+
+
+                          ?>
+                           <li><a href="../layout/caja.php"><i class="fa fa-money"></i> Abrir  caja</a></li>
+                                   <?php                   
+}
+           if ($caja_cont>0) {
+
+
+                          ?>   
+
+                    <li><a href="../layout/caja_close.php"><i class="fa fa-money"></i> Cerrar caja</a></li>
+
+                         <?php 
+                         }
+                             ?>  
+                  </ul>
+                </li>  
+
+        <?php
+                      }
+                      ?>
+
+
+          <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>
+                                         <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="{% static 'img/iconos/iconopago.png'%}" alt="">POS
+
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                
+                    <li><a href="{% url 'pos' %}"><i class="fa fa-money"></i> POS </a></li>
+
+             
+                    
+                  </ul>
+                </li>  
+
+ 
+
+        <?php
+                      }
+                      ?>
+              </ul>
+            </nav>
+          </div>
+ </div>
+
+
+
+       <?php include '../layout/top_nav.php';?>      <!-- /top navigation -->
+       <style>
+label{
+
+color: black;
+}
+li {
+  color: white;
+}
+ul {
+  color: white;
+}
+#buscar{
+  text-align: right;
+}
+       </style>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class = "x-panel">
+
+            </div>
+
+        </div><!--end of modal-dialog-->
+ </div>
+ <!--end of modal-->
+                        <div class="box-body">
+                  <!-- Date range -->
+
+          </div>
+
+                  <div class="box-header">
+                  <h3 class="box-title"> MENU</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+
+
+
+
+<style type="text/css">
+  
+  .fondo1{
+    background-color: #14B9FF;
+  }
+  .small-box .icon{
+    left: : 10px;
+    right: 0px;
+  }
+  .fondo2{
+    background-color: #3E97D9;
+  }
+
+
+</style>
+
+
+
+
+
+
+                <div class="box-header with-border">
+                  <h3 class="box-title"></h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <div class="row">
+                             <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo1">
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/caja.png'%}">
+              <i class=""></i>
+            </div>
+
+            <div class="inner" >
+              <p style="color:white;">Caja</p>
+            </div>
+
+            '<a href="../layout/caja.php" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; 
+          </div>
+        </div>
+
+
+
+                       <?php
+                      }
+                      ?>
+
+
+
+                                   <?php
+                     if ($tipo=="administrador" ) {
+                    
+                      ?>
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo2">
+            <div class="inner" >
+              <p style="color:white;">Usuarios</p>
+            </div>
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/doctor.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="{% url 'clientes' %}" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+        
+                                 <?php
+                      }
+                      ?>
+
+
+                                   <?php
+                     if ($tipo=="administrador" ) {
+                    
+                      ?>
+
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo1">
+            <div class="inner" >
+              <p style="color:white;">Configuración</p>
+            </div>
+
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/configuracion.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="../configuracion/configuracion.php" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+        
+          
+
+
+ 
+
+
+
+                  <?php
+                      }
+                      ?>
+
+
+
+
+
+                   <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo2">
+            <div class="inner" >
+              <p style="color:white;">Clientes</p>
+            </div>
+
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/clientes_grande.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="{% url 'clientes' %}" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+    <?php
+                      }
+                      ?>  
+
+
+                   <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>
+
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo2">
+            <div class="inner" >
+              <p style="color:white;">Egresos</p>
+            </div>
+            <div class="icon"><img style="float:right;" height="80" width="80" src="{% static 'img/iconos/egresos.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="{% url 'pos' %}" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+
+
+       <?php
+                      }
+                      ?>  
+
+
+                   <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo1">
+            <div class="inner" >
+              <p style="color:white;">Mensajes</p>
+            </div>
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/mensajes.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="../gastos/gastos.php" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+
+       <?php
+                      }
+                      ?>  
+                         <?php
+                      if ($tipo=="administrador" or $tipo=="empleado") {
+                    
+                      ?>        
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo2">
+            <div class="inner" >
+              <p style="color:white;">Ingresos</p>
+            </div>
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/ingresos.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="../ingresos/ingresos.php" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+
+
+      <?php
+                      }
+                      ?>  
+
+
+
+                               <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo1">
+            <div class="inner" style="margin-bottom:3.5vh">
+              <p style="color:white;">Punto de venta</p>
+            </div>
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/punto_venta.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="{% url 'pos' %}" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+                  </div><!--row-->
+                  
+      
+  
+   
+            </div><!-- /.col (right) -->
+
+
+
+                          <div class="box-body">
+                  <div class="row">
+                              <?php
+                     if ($tipo=="administrador" ) {
+                    
+                      ?>
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo1">
+            <div class="inner" >
+              <p style="color:white;">Medicamentos</p>
+            </div>
+            <div class="icon"><img style="float:right;" height="80" width="80" src="{% static 'img/iconos/medicamentos.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="{% url 'medicamentos' %}" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box fondo1">
+            <div class="inner" >
+              <p style="color:white;">Consulta</p>
+            </div>
+            <div class="icon"><img style="float: right;" height="80" width="80" src="{% static 'img/iconos/medicamentos.png'%}">
+              <i class=""></i>
+            </div>
+            <?php echo ($num > 0) ? '<a href="{% url 'medicamentos' %}" class="small-box-footer">Mas info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
+          </div>
+        </div>
+
+
+
+        
+
+                      <?php
+                      }
+                      ?>
+
+
+                </div>
+
+            </div>
+
+
+                </div><!-- /.box-body -->
+
+            </div><!-- /.col -->
+
+
+          </div><!-- /.row -->
+
+
+
+
+                </div><!-- /.box-body -->
+
+            </div>
+        </div>
+      </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <!-- footer content -->
+
+        <!-- /footer content -->
+      </div>
+    </div>
+
+  <?php include '../layout/datatable_script.php';?>
+
+
+
+        <script>
+        $(document).ready( function() {
+                $('#example2').dataTable( {
+                 "language": {
+                   "paginate": {
+                      "previous": "anterior",
+                      "next": "posterior"
+                    },
+                    "search": "Buscar:",
+
+
+                  },
+
+                  "info": false,
+                  "lengthChange": false,
+                  "searching": false,
+
+
+  "searching": true,
+                }
+
+              );
+              } );
+    </script>
+
+
+    <script src="{% static 'plugins/jQuery/jQuery-2.1.4.min.js' %}"></script> 
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script> 
+    <script src="{% static 'plugins/slimScroll/jquery.slimscroll.min.js' %}"></script> 
+    <script src="{% static 'plugins/fastclick/fastclick.min.js' %}"></script> 
+    <script src="{% static 'dist/js/app.min.js' %}"></script> 
+    <script src="{% static 'dist/js/demo.js' %}"></script>
+
+
+    <!-- /gauge.js -->
+  </body>
+</html>

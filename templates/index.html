@@ -1,0 +1,547 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/component-custom-switch.css' %}">
+</head>
+<body>
+
+
+<!--Seccion de primer fondo web-->
+<div class="container-fluid d-none d-sm-block d-md-block d-lg-block d-xl-block" >
+
+
+
+<div class="container-fluid">
+
+<div class="row" style="height: 7vh">
+
+
+    <div class="col-sm-1">
+        
+    </div>
+
+    <div class="col-sm-2">
+    </div>
+
+
+    <div class="col-sm-1">
+        <img src="{% static 'img/cuadrito_azul.png' %}" class="img-responsive" style="transform: rotateZ(90deg);height: 15vh;margin-left: 7vw;margin-top: -3vh;">
+
+
+    </div>
+
+
+
+</div>
+
+<div class="row">
+    <div class="col-sm-1">
+        
+    </div>
+
+    <div class="col-sm-2">
+<a href="{% url 'index' %}">
+  <img src="{% static 'img/logo.png' %}" style="width: 100%;margin-left: 5%;margin-top:-3vh;" class="img-responsive">
+</a>
+    </div>
+
+
+    <div class="col-sm-1">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 20%;margin-top:5vh;color: #162884;font-family: regular;border-left: 1px solid blue;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                Inicio
+            </font>
+        </a>
+
+    </div>
+
+    <div class="col-sm-3" style="padding:0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 0%;margin-top:5vh;color: #162884;font-family: regular;padding-left: 9vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                ¿Quiénes somos?
+            </font>
+        </a>
+
+    </div>
+        
+    
+    <div class="col-sm-2" style="padding:0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-top:5vh;color: #162884;font-family: regular;padding-top: .75vh;padding-bottom:.75vh">
+
+                ¿Cómo funciona?
+            </font>
+        </a>
+
+    </div>
+
+    <div class="col-sm-3">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 20%;margin-top:5vh;color: #162884;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                Precios
+            </font>
+        </a>
+
+    </div>
+    <div class="col-sm-3">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 20%;margin-top:5vh;color: #162884;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                Registrate
+            </font>
+        </a>
+
+    </div>
+    <div class="col-sm-3">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 20%;margin-top:5vh;color: #162884;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                Iniciar sesión
+            </font>
+        </a>
+
+    </div>
+
+
+
+
+</div>
+    
+</div>
+
+
+
+
+
+
+
+</div>
+<!--Seccion de primer fondo web-->
+
+
+<!--Seccion 1-->
+
+<div class="container-fluid" style="padding: 0px">
+
+<div class="row">
+    <div class="col-sm-1">
+<img src="{% static 'img/cuadrito_azul.png' %}" class="img-responsive" style="width: 50%;height: 50vh;padding-top: 10vh">
+        
+    </div>
+    <div class="col-sm-6" style="padding-top:10vh">
+
+
+        <font style="">
+            <b>
+                <p align="left" style="padding-left: 5vw;font-size:4vw;font-weight:bold;color:#002C66;line-height: normal">
+            Atención médica
+            segura y a tu alcance
+                    
+                </p>
+            </b>
+        </font>
+        <br>
+         <font style="">
+            <b>
+                <p align="left" style="padding-left: 5vw;font-size:1.95vw;font-weight:bold;color:#0AA5FF;line-height: normal">
+            Atención médica de forma segura y sin colas
+                    
+                </p>
+            </b>
+        </font>
+
+
+        <div class="container-fluid" style="padding: 0px;margin-left: 5vw;margin-right:5vw;background-color:#F8F8F8;padding-bottom: 1.5vh">
+            <button class="btn" style="margin-top: 1vh;margin-left: 1vw;padding-right: 2vw;background-color: #14B9FF">
+                <font style="color:white;font-weight: bold">
+
+
+                    <img src="{% static 'img/calendarblanco.svg' %}" style="width: 15%;color:white" class="img-responsive">
+                Vista presencial
+                    
+                </font>
+            </button>
+
+            <button class="btn" style="margin-top: 1vh;margin-left: 1vw;padding-right: 2vw;border-color: #86DBFF;background-color: white">
+                <font style="color:#14B9FF;font-weight: bold">
+
+
+                    <img src="{% static 'img/camara.svg' %}" style="width: 25%;" class="img-responsive">
+                En linea
+                    
+                </font>
+            </button>
+
+            <br>
+
+            <select class="form-control" style="width: 35%;margin-left: 1vw;margin-top: 1vh;margin-bottom: 2vh;display: inline-block;">
+                <option>p. ej. Dentista</option>
+            </select>
+
+            <select class="form-control" style="width: 35%;margin-left: 1vw;margin-top: 1vh;margin-bottom: 2vh;display: inline-block;">
+                <option>Puebla</option>
+            </select>
+
+            <button class="btn" style="margin-left: 1vw;width: 15%;background-color:#14B9FF">
+                <font style="color:white;font-weight: bold">
+                Buscar
+                    
+                </font>
+            </button>
+
+        </div>
+
+
+    <div class="container-fluid" style="margin-left: 5vw">
+        <img src="{% static 'img/medicos.png' %}" class="img-responsive" style="width: 40%;height: 5vh;display: inline-block;">
+
+        <font style="color:#14B9FF;padding-top: 3vh;font-size: 1.5vw" >
+            Más de &nbsp;&nbsp;&nbsp;especialistas a tu disposición
+        </font>
+    </div>
+
+    </div>
+
+    <div class="col-sm-5" style="padding:0px">
+        <img src="{% static 'img/doctor_portada.png' %}" class="img-responsive" style="width: 100%">
+    </div>
+</div>
+
+
+</div>
+<!--Seccion 1-->
+
+
+<!--Seccion 2-->
+
+
+<center>
+            <font style="">
+            <b>
+                <p  style="padding-left: 2vw;font-size:2vw;font-weight:bold;color:#162884;line-height: normal;margin-top: 10vh">
+                    En <font style="color:#14B9FF">Clinitec</font>,todo lo hacemos
+                    <br>        
+                    <font style="color:#14B9FF">pensando en ti</font>
+                </p>
+            </b>
+            <br>
+        </font>
+
+  <a href="{% url 'index_medico' %}">
+
+      <div class="container h-100" onclick="cambiar();">
+        <div class="d-flex align-items-start flex-column h-100">
+          <div class="w-100 m-auto py-5 text-center">
+            <div class="custom-switch custom-switch-label-status pl-0">
+              <input class="custom-switch-input" id="example_05" type="checkbox" checked="">
+              <label class="custom-switch-btn" for="example_05"></label>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+  </a>
+
+<script type="text/javascript">
+    function cambiar(){
+        window.location.replace("{% url 'index_medico' %}")
+    }
+</script>
+
+</center>
+
+<!-- Seccion 2 -->
+
+<!--Seccion 3-->
+
+<center>
+    <img src="{% static 'img/manos_pacienrte.png' %}" style="width: 75%" class="img-responsive">
+</center>
+<!--Seccion 3-->
+
+<!--Seccion 4-->
+<div class="container-fluid" style="padding: 0px;padding-right: 10vw;padding-left: 10vw">
+    <div class="row">
+
+        <div class="col-sm-2" style="margin-right: 7.5vw">
+            <div class="row" >
+                <div class="col-sm-4" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-8" style="padding: 0px">
+                    <font style="color:#0AA5FF;font-size: 1.25vw">
+                        <b>Pide cita de forma fácil</b>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="left" style="font-size:1vw;color:#002C66">
+                    Las opiniones reales de miles de
+                    pacientes te ayudarán a tomar
+                    siempre la mejor decisión.
+                </p>
+            </font>
+        </div>
+
+
+        <div class="col-sm-2" style="margin-right: 7.5vw">
+            <div class="row" >
+                <div class="col-sm-4" style="padding: 0px">
+                    <img src="{% static 'img/iconos/agenda.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-8" style="padding: 0px">
+                    <font style="color:#0AA5FF;font-size: 1.25vw">
+                        <b>Pide cita de forma fácil</b>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="left" style="font-size:1vw;color:#002C66">
+                    Las opiniones reales de miles de
+                    pacientes te ayudarán a tomar
+                    siempre la mejor decisión.
+                </p>
+            </font>
+        </div>
+
+
+        <div class="col-sm-2" style="margin-right: 7.5vw">
+            <div class="row" >
+                <div class="col-sm-4" style="padding: 0px">
+                    <img src="{% static 'img/iconos/agenda.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-8" style="padding: 0px">
+                    <font style="color:#0AA5FF;font-size: 1.25vw">
+                        <b>Recordatorios por SMS</b>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="left" style="font-size:1vw;color:#002C66">
+                    Las opiniones reales de miles de
+                    pacientes te ayudarán a tomar
+                    siempre la mejor decisión.
+                </p>
+            </font>
+        </div>
+
+
+        <div class="col-sm-2" >
+            <div class="row" >
+                <div class="col-sm-4" style="padding: 0px">
+                    <img src="{% static 'img/iconos/agenda.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-8" style="padding: 0px">
+                    <font style="color:#0AA5FF;font-size: 1.25vw">
+                        <b>Encuentra tu especialista</b>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="left" style="font-size:1vw;color:#002C66">
+                    Las opiniones reales de miles de
+                    pacientes te ayudarán a tomar
+                    siempre la mejor decisión.
+                </p>
+            </font>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<center>
+    <hr style="padding-right: 10vw;padding-left: 10vw;width: 60%;height: 2px">
+
+</center>
+<!--Seccion 4-->
+
+
+<!--Seccion 5-->
+<div class="container-fluid" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-6" style="padding-top: 2.5vh;padding-left: 5vw">
+            
+            <b>
+                <p  style="padding-left: 2vw;font-size:2.5vw;font-weight:bold;color:#002C66;line-height: normal;margin-top: 10vh">
+                    Sus <font style="color:#0AA5FF">datos</font> están <font style="color:#0AA5FF">seguros</font>
+
+                    <br>        
+                    <font style="color:#002C66">con nosotros</font>
+                </p>
+            </b>
+
+
+            <p style="padding-left: 2vw;font-size:1.25vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;line-height: 1px">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Todos los datos que agregue son<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exclusivamente suyos
+            </p>
+
+            <p style="padding-left: 2vw;font-size:1.25vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;line-height: 1px">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Su información está encriptada y protegida
+            </p>
+
+            <p style="padding-left: 2vw;font-size:1.25vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;line-height: 1px">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Clinitec no compartirá ni venderá sus datos
+            </p>
+
+        </div>
+
+        <div class="col-sm-6">
+            <img src="{% static 'img/doctora.png' %}" style="width: 100%" class="img-responsive">
+        </div>
+    </div>
+</div>
+
+<!--Seccion 5-->
+
+
+
+<!--Seccion 6-->
+
+<div class="container-fluid" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-4" style="padding: 0px;">
+            <img src="{% static 'img/esquina.png' %}" class="img-responsive" style="width: 100%">
+        </div>
+        <div class="col-sm-8" style="padding:0px;">
+            <img src="{% static 'img/telefonos.png' %}" class=  "img-responsive" style="width: 100%;margin-left: -7.5vw;margin-top: 20vh">
+        </div>
+    </div>
+
+
+    <center>
+        <button class="btn" style="background-color:#0AA5FF;border-radius: 60px;padding-right: 10vw;padding-left: 10vw;padding-top:-10vh"><font style="font-size: 2vw;color:white">Ver mas</font></button>
+    </center>
+
+</div>
+
+
+
+<!--Seccion 6-->
+
+
+
+<!--Seccion 7-->
+
+<div class="container-fluid" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-6" style="padding-top: 2.5vh;padding-left: 5vw">
+            
+            <b>
+                <p  style="padding-left: 2vw;font-size:2.5vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh">
+                    Atención <font style="color:#002C66">en<br>cualquier</font> lugar <font style="color:#002C66"> en <br></font><font style="color:#002C66">cualquier </font><font style="color:#0AA5FF">momento</font>
+
+                </p>
+            </b>
+
+
+        </div>
+
+        <div class="col-sm-6">
+            <img src="{% static 'img/doctora2.png' %}" style="width: 100%" class="img-responsive">
+        </div>
+    </div>
+</div>
+
+<!--Seccion 7-->
+
+<!--Seccion 8-->
+
+
+<div class="container-fluid" style="padding: 0px;height: 45vh; background-image: linear-gradient(#002C66,#0AA5FF);">
+    <div class="row">
+        <div class="col-sm-1">
+            
+        </div>
+        <div class="col-sm-2" style="padding-top: 5vh">
+            <img src="{% static 'img/logo_blanco.png' %}" style="width: 75%" class="img-responsive">
+            <font color="whie" style="color:white;font-size: 1vw">
+                <b>
+                    <font style="font-size: 1.25vw">
+                        Servicios
+                    </font>
+                </b>
+                <br>
+                Quienes somos
+                <br>
+                Contacto
+                <br>
+                Empleo Nuevas posiciones
+                <br>
+                Términos y condiciones
+                <br>
+                Prensa
+            </font>
+        </div>
+        <div class="col-sm-2" style="padding-top: 9vh">
+
+            <font color="whie" style="color:white;font-size: 1vw">
+                <b>
+                    <font style="font-size: 1.25vw">
+                    Para profesionales                        
+                    </font>
+                </b>
+                <br>
+                Para especialistas
+                <br>
+                Planes y precios
+                <br>
+                Recursos
+                <br>
+                Widget para su web
+                <br>
+                Para clínicas
+                <br>
+                Centro de ayuda
+                <br>
+                Condiciones del perfil Premium
+                <br>
+                Consulta en linea nuevo
+            </font>
+        </div>
+
+        <div class="col-sm-3">
+            
+        </div>
+
+        <div class="col-sm-4">
+            <img src="{% static 'img/lado_derecho.png' %}" class="img-responsive" style="width: 100%;height: 45vh">
+        </div>        
+    </div>
+</div>
+<!--Seccion 8-->
+
+
+
+</body>
+</html>
