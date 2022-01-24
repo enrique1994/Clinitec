@@ -1,0 +1,102 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <title>Clinitec</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    
+    <!-- Font Awesome -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/AdminLTE.min.css' %}">
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{% static 'dist/css/skins/_all-skins.min.css' %}">
+
+    <title>Sistema de celulares</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="sistema de parqueamiento, parqueo,codigo fuente parqueo, sistema de parqueamiento con codigo fuente"
+    />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- /google fonts-->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body style="background-color:#0072B7;max-height: 100vh;overflow: hidden;z-index: -10000" class="mh-100" >
+    <div class=" w3l-login-form" style="margin-top: 10vh;background-color: white;z-index: 1">
+    <center>
+        <img src="{% static 'img/logo.png' %}" class="img-responsive" style="width: 50%">
+        <font color="#0072B7" face="bold" style="font-size: xx-large;"><b>Punto de venta</b></font>
+        
+    </center>
+    <form action="#" method="post" style="z-index: 10000">
+        {% csrf_token %}
+            <div class=" w3l-form-group">
+                <label><b style="color:black">Correo electrónico</b>:</label>
+                <div class="group">
+                    <input style="height: 5vh" type="text" class="form-control" placeholder="Usuario"  name="email" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group" style="margin-bottom: 0px">
+                <label><b style="color:black">Contraseña</b>:</label>                
+                <div class="group">
+                    <input style="height: 5vh" type="password" class="form-control" placeholder="Password" name="pwd" value="admin" required="required" />
+                </div>
+            </div>
+            <p style="color:#14B9FF">
+                ¿Olvidaste tu <br>contraseña?
+            </p>
+        <center>
+    <div class="g-recaptcha" data-sitekey="6LdDXKMUAAAAAKxKho0bn1Pk3AOLQzprlPthdmfu" style="margin-bottom: 5%;"></div>
+        </center>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %} ><font color="red">{{ message }}</font></li>
+        {% endfor %}
+    </ul>    
+{% endif %}
+
+            <button type="submit" name="login" style="background-color:#14B9FF">Ingresar</button>
+    
+        </form>
+
+    </div>
+<img src="{% static 'img/fondo.png' %}" class="img-responsive fixed-bottom" style="width: 100%;height: auto;margin-top: -10vh;z-index: -1;position: absolute;">
+
+
+
+    <script src="{% static 'plugins/jQuery/jQuery-2.1.4.min.js' %}"></script> 
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script> 
+    <script src="{% static 'plugins/slimScroll/jquery.slimscroll.min.js' %}"></script> 
+    <script src="{% static 'plugins/fastclick/fastclick.min.js' %}"></script> 
+    <script src="{% static 'dist/js/app.min.js' %}"></script> 
+    <script src="{% static 'dist/js/demo.js' %}"></script>
+
+
+
+</body>
+
+</html>

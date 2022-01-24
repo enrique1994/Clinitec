@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/component-custom-switch.css' %}">
+</head>
+<body>
+
+<img src="{% static 'img/cuadrito_azul.png' %}" class="img-responsive" style="width: 1%;transform: rotateZ(90deg);height: 15vh;margin-left: 45vw;margin-top: -7vh;">
+
+<!--Seccion de primer fondo web-->
+<div class="container-fluid d-none d-sm-block d-md-block d-lg-block d-xl-block" style="padding: 0px;background-repeat: no-repeat; background-image: url('{% static 'fondo.png' %}');height: 20vh;background-position: center;background-size: cover;background-attachment: fixed;">
+<div class="row" style="display: initial;">
+  <img src="{% static 'img/logo.png' %}" style="position: absolute;width: 15%;margin-left: 5%;margin-top:2vh;" class="img-responsive">
+<a href="{% url 'index' %}"><font style="font-size: 1.5vw;position: absolute;margin-left: 20%;margin-top:5vh;color: #002C66;font-family: regular;border-left: 1px solid blue;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">Inicio</font></a>
+
+
+<a href="{% url 'quienes_somos' %}"><font style="font-size: 1.5vw;position: absolute;margin-left: 30%;margin-top:5vh;color: #002C66;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">¿Quiénes somos?</font></a>
+
+<a href="#"><font style="font-size: 1.5vw;position: absolute;margin-left: 45%;margin-top:5vh;color:#002C66;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">¿Cómo funciona?</font></a>
+
+<a href="#"><font style="font-size: 1.5vw;position: absolute;margin-left: 60%;margin-top:5vh;color: #002C66;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">Precios</font></a>
+
+<a href="#"><font style="font-size: 1.5vw;position: absolute;margin-left: 70%;margin-top:5vh;color: #002C66;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">Regístrate</font></a>
+
+
+<a href="{% url 'login' %}"><font style="font-size: 1.5vw;position: absolute;margin-left: 80%;margin-top:5vh;color: #162884;font-family: regular;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">Iniciar sesion</font></a>
+
+</div>
+
+</div>
+<!--Seccion de primer fondo web-->
+
+
+<!--Seccion 1-->
+
+<div class="container-fluid" style="padding: 0px;position: relative;height: 120vh">
+
+<img src="{% static 'img/fondo_quienes.png' %}" class="img-responsive" style="width:100%;position: absolute;">
+
+<font style="text-align: center;margin-top: 115vh;color:#1499FF">
+    <h1>
+        <b>
+            <br>
+            ¿Quiénes somos?        
+        </b>
+
+    </h1>
+</font>
+
+
+<img src="{% static 'img/dispositivos.png' %}" class="img-responsive" style="width: 100%;position: absolute;padding-right: 15%;padding-left: 15%;margin-top: 30vh">
+    
+
+</div>
+<!--Seccion 1-->
+
+
+<!--Seccion 2-->
+<div class="container-fluid" style="padding: 0px;">
+    <div class="row">
+        <div class="col-sm-6" style="padding-left: 10vw;padding-bottom: 20vh">
+            <font style="color:#1499FF;margin-bottom: 5vh;font-size: 4vw">
+                <b>
+                    Misión
+                </b>
+            </font>
+            <br>
+            <font style="color:#162884;font-size: 1.25vw;text-align: left;">
+                En CLINITEC somos un equipo multidisciplinario,<br>
+                dedicado a generar herramientas tecnológicas para<br>
+                el profesional de la salud y su entorno de trabajo,<br>
+                innovando e integrando soluciones a la medida,<br>
+                totalmente escalable a través de la evolución<br>
+                constante y la libertad creativa de nuestro equipo.
+
+            </font>
+            <br>
+            <br>
+            <br>
+            <br>
+            <font style="color:#1499FF;margin-bottom: 5vh;font-size: 4vw">
+                <b>
+                    Visión
+                </b>
+            </font>
+            <br>
+            <font style="color:#162884;font-size: 1.25vw;text-align: left;">
+                Ser la empresa líder en la distribución y administración de<br>
+                archivo clínico virtual, y de software para manejo de<br>
+                clínicas y hospitales, principal red global de enlace e<br>
+                interacción médico-paciente, haciendo uso de las<br>
+                herramientas de encriptación más seguras, ofreciendo<br>
+                inmediata disponibilidad y la más calidad en el servicio.
+
+            </font>
+
+        </div>    
+        <div class="col-sm-6" style="padding-top: 10vh">
+            <img src="{% static 'img/interaccion.png' %}" class="img-responsive" style="width: 100%;padding-right: 5vw;padding-left: 5vw">
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Seccion 2 -->
+
+<!--Seccion 3-->
+<!--Seccion 3-->
+
+<!--Seccion 4-->
+<!--Seccion 4-->
+
+
+<!--Seccion 5-->
+
+<!--Seccion 5-->
+
+
+
+<!--Seccion 6-->
+
+
+
+<!--Seccion 6-->
+
+
+
+<!--Seccion 7-->
+
+
+<!--Seccion 7-->
+
+<!--Seccion 8-->
+
+
+<!--Seccion 8-->
+
+<!--Seccion 8-->
+
+
+</body>
+</html>

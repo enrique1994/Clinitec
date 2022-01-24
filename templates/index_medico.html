@@ -1,0 +1,1011 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/component-custom-switch.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="overflow-x: hidden;">
+
+
+<!--Seccion de primer fondo web-->
+<div class="container-fluid d-none d-sm-block d-md-block d-lg-block d-xl-block" style="padding: 0px">
+
+
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px">
+
+<div class="row" style="padding: 0px;height: 7vh">
+
+
+    <div class="col-sm-1" style="padding: 0px">
+        
+    </div>
+
+    <div class="col-sm-2" style="padding: 0px">
+    </div>
+
+
+    <div class="col-sm-1" style="padding: 0px">
+        <img src="{% static 'img/cuadrito_azul.png' %}" class="img-responsive" style="transform: rotateZ(90deg);height: 15vh;margin-left: -0.75vw;margin-top: -3vh;">
+
+
+    </div>
+
+
+
+</div>
+
+<div class="row">
+
+
+    <div class="col-sm-2" style="padding: 0px">
+<a href="{% url 'index_medico' %}">
+  <img src="{% static 'img/logo.png' %}" style="width: 100%;margin-left: 5%;margin-top:-3vh;" class="img-responsive">
+</a>
+    </div>
+
+
+    <div class="col-sm-1" style="padding: 0px">
+
+        <a href="{% url 'index_medico' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 20%;margin-top:5vh;color: #162884;font-family: regular;border-left: 1px solid blue;padding-left: 5vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                Inicio
+            </font>
+        </a>
+
+    </div>
+
+    <div class="col-sm-3" style="padding:0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-left: 0%;margin-top:5vh;color: #162884;font-family: regular;padding-left: 9vw;padding-top: .75vh;padding-bottom:.75vh">
+
+                ¿Quiénes somos?
+            </font>
+        </a>
+
+    </div>
+        
+    
+    <div class="col-sm-2" style="padding:0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-top:5vh;color: #162884;font-family: regular;padding-top: .75vh;padding-bottom:.75vh">
+
+                ¿Cómo funciona?
+            </font>
+        </a>
+
+    </div>
+
+    <div class="col-sm-1" style="padding: 0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-top:5vh;color: #162884;font-family: regular;padding-top: .75vh;padding-bottom:.75vh">
+
+                Precios
+            </font>
+        </a>
+
+    </div>
+    <div class="col-sm-1" style="padding: 0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-top:5vh;color: #162884;font-family: regular;padding-top: .75vh;padding-bottom:.75vh">
+
+                Registrate
+            </font>
+        </a>
+
+    </div>
+    <div class="col-sm-2" style="padding: 0px">
+
+        <a href="{% url 'index' %}">
+
+            <font style="font-size: 1.5vw;margin-top:5vh;color: #162884;font-family: regular;padding-top: .75vh;padding-bottom:.75vh">
+
+                Iniciar sesión
+            </font>
+        </a>
+
+    </div>
+
+
+
+
+</div>
+    
+</div>
+
+
+
+
+
+
+
+</div>
+<!--Seccion de primer fondo web-->
+
+
+<!-- Seccion movil -->
+<div class="d-block d-sm-none">
+<nav class=" navbar navbar-expand-sm  navbar-dark fixed-top " style="background-color: cornflowerblue">
+  <!-- Brand -->
+<a class="navbar-brand" href="{% url 'index' %}">
+  <img src="{% static 'img/logo.png' %}" style="width: 75%;margin-left: 75%;margin-top:-1vh;" class="img-responsive">
+</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" onclick="cambiar_icono();">
+    <span class="navbar-toggler-icon" id="icono"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">¿QUIENES SOMOS?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CÓMO FUNCIONA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">PRECIOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">REGÍSTRATE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">INICIAR SESIÓN</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+</div>
+<!-- Seccion movil -->
+
+<!--Seccion 1-->
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-1">
+            <img src="{% static 'img/cuadrito_azul.png' %}" class="img-responsive" style="width: 50%;height: 50vh;padding-top: 10vh">
+            
+        </div>
+
+    <div class="col-sm-4" style="padding-top:0vh">
+
+  <a href="{% url 'index' %}">
+            <div class="custom-switch custom-switch-label-status pl-0" style="margin-left:5vw;margin-top: 10vh">
+              <input class="custom-switch-input" id="example_05" type="checkbox">
+              <label class="custom-switch-btn" for="example_05"></label>
+            </div>
+
+
+
+      
+  </a>
+
+
+        <font style="">
+            <b>
+                <p align="left" style="padding-left: 5vw;font-size:2.75vw;font-weight:bold;color:#002C66;line-height: normal;width: 50vw">
+            Un expediente integral,<br>
+            para una organización perfecta
+                    
+                </p>
+            </b>
+        </font>
+        <br>
+
+
+
+
+    <div class="container-fluid" style="margin-left: 5vw;padding: 0px">
+        <div class="row">
+            <div class="col-sm-5" style="padding:0px">
+                <img src="{% static 'img/medicos.png' %}" class="img-responsive" style="width: 100%;height: 5vh;display: inline-block;">
+                
+            </div>
+            <div class="col-sm-7" style="padding: 0px;padding-left:1.5vw">
+        <font style="color:#14B9FF;padding-top: 2.75vh;font-size: 1.0vw;line-height: 1px" >
+            <b>
+            Ùnete a la comunidad de<br>
+            especialistas que ya usan Clinitec
+            </b>
+        </font>
+                
+            </div>
+        </div>
+
+    <button class="btn btn-danger" style="width: 80%;border-radius: 40px;margin-top: 5vh;margin-left: -2vw">
+        <font color="white">
+            REGISTRATE AHORA 
+        </font>
+    </button>
+
+    </div>
+
+    </div>
+
+
+        <div class="col-sm-7" style="padding:0px">
+            <img src="{% static 'img/doctor_medico.png' %}" class="img-responsive" style="width: 100%">
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--Seccion 1-->
+
+
+<!--Seccion movil 1-->
+
+<div class="container-fluid d-block d-sm-none">
+    <center>
+            <div class="custom-switch custom-switch-label-status pl-0" style="margin-left:5vw;margin-top: 10vh">
+              <input class="custom-switch-input custom-switch-input-mov" id="example_05" type="checkbox">
+              <label class="custom-switch-btn custom-switch-btn-mov" for="example_05m"></label>
+            </div>
+
+
+        <font style="">
+            <b>
+                <p align="center" style="font-size:6vw;font-weight:bold;color:#002C66;line-height: normal;">
+            Un expediente integral,<br>
+            para una<br> 
+            organización perfecta
+                    
+                </p>
+            </b>
+        </font>
+        
+    </center>
+</div>
+<style type="text/css">
+    .custom-switch .custom-switch-input + .custom-switch-btn-mov .custom-switch-btn-mov:after{
+        left: -30px;
+    }
+</style>
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px">
+    <button class="btn btn-danger" style="width: 60%;border-radius: 40px;margin-top: 0vh;margin-left: 5vw;position: absolute;padding-left: 5vw;height:6vh">
+        <p align="left" style="line-height: 15px">
+            <font color="white" >
+                Crea tu<br>
+                expediente ahora
+            </font>
+        </p>
+    </button>
+
+    <img src="{% static 'img/medicos.png' %}" class="img-responsive" style="width: 40%;height: 4vh;display: inline-block;position: absolute;margin-top: 12.5vh;margin-left: 5vw">
+
+    <font style="color:#14B9FF;margin-top: 20vh;font-size: 4vw;margin-left: 5vw;position: absolute;" >
+        <b>
+        Ùnete a la comunidad de<br>
+        especialistas que ya usan Clinitec
+        </b>
+    </font>
+
+    <img src="{% static 'img/doctor_medico.png' %}" class="img-responsive" style="width: 100%">
+</div>
+
+<!--Seccion movil 1-->
+
+
+
+<!--Seccion 2-->
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px">
+<center>
+        <font style="">
+            <b>
+                <p  style="padding-left: 2vw;font-size:2vw;font-weight:bold;color:#162884;line-height: normal;margin-top: 10vh">
+                    En <font style="color:#14B9FF">Clinitec</font>,todo lo hacemos
+                    <br>        
+                    <font style="color:#14B9FF">pensando en ti</font>
+                </p>
+            </b>
+            <br>
+        </font>
+
+
+<script type="text/javascript">
+    function cambiar(){
+        window.location.replace("{% url 'index_medico' %}")
+    }
+</script>
+
+</center>
+    
+</div>
+
+<!-- Seccion 2 -->
+
+<!-- Seccion Movil 2 -->
+
+<div class="container-fluid d-block d-sm-none">
+    
+    <center>
+        <font style="">
+            <b>
+                <p  style="padding-left: 2vw;font-size:6vw;font-weight:bold;color:#162884;line-height: normal;margin-top: 10vh">
+                    En <font style="color:#14B9FF">Clinitec</font>,todo lo hacemos
+                    <br>        
+                    <font style="color:#14B9FF">pensando en ti</font>
+                </p>
+            </b>
+            <br>
+        </font>
+
+
+<script type="text/javascript">
+    function cambiar(){
+        window.location.replace("{% url 'index_medico' %}")
+    }
+</script>
+
+</center>
+
+</div>
+
+<!-- Seccion Movil 2 -->
+
+
+
+<!--Seccion 3-->
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px">
+<center>
+    <img src="{% static 'img/manos_medico.png' %}" style="width: 75%" class="img-responsive">
+</center>
+    
+</div>
+<!--Seccion 3-->
+
+
+<!--Seccion Movil 3-->
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px">
+<center>
+    <img src="{% static 'img/manos_medico.png' %}" style="width: 50%" class="img-responsive">
+</center>
+    
+</div>
+<!--Seccion Movil 3-->
+
+<!--Seccion 4-->
+<div class="container-fluid d-none d-sm-block" style="padding: 0px;padding-right: 10vw;padding-left: 10vw;margin-top: 20vh">
+    <div class="row">
+
+        <div class="col-sm-3" style="padding: 0px" >
+            <div class="row" >
+                <div class="col-sm-3" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-9" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 1.20vw">
+                        <p align="justify" style="padding-left:5%;padding-right: 35%"><b>Consulta desde cualquier parte.</b></p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:1vw;color:#002C66;padding-right: 20%">
+                Contacta a tus pacientes desde
+                donde estés de la manera más
+                fácil y amigable. Usa la
+                plataforma clinitec desde tu
+                computadora, celular o Tablet.
+                Disponible para iOS y Android.
+                </p>
+            </font>
+        </div>
+
+
+        <div class="col-sm-3" style="padding: 0px">
+            <div class="row" >
+                <div class="col-sm-3" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-9" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 1.20vw">
+                        <p align="justify" style="padding-right: 10%"><b>Integra la información de tus pacientes</b></p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:1vw;color:#002C66;padding-right:15%">
+                Desde el expediente médico hasta
+                consultas, recetas y estudios; todo en
+                tu sistema Clinitec.
+                </p>
+            </font>
+        </div>
+
+
+        <div class="col-sm-3" style="padding: 0px">
+            <div class="row" >
+                <div class="col-sm-3" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-9" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 1.20vw">
+                        <p align="justify" style="padding-right: 20%"><b>Administra mejor tu consultorio</b></p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:1vw;color:#002C66;padding-right:11%">
+                Clinitec cuenta con las herramientas
+                de administración y gestión más
+                poderosas, para el manejo, cuidado
+                y organización de tu información y
+                tus insumos.
+                </p>
+            </font>
+        </div>
+
+
+        <div class="col-sm-3" style="padding: 0px">
+            <div class="row" >
+                <div class="col-sm-3" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-9" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 1.20vw">
+                        <p align="justify" style="padding-right: 20%"><b>Administra médica en línea</b></p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:1vw;color:#002C66;padding-right:20%">
+                    Comparte, maneja y organiza tu
+                    agenda en tiempo real y
+                    disponible siempre. Establece
+                    tus distintas ubicaciones y
+                    horarios de consulta.
+                </p>
+            </font>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+<!--Seccion 4-->
+
+
+<!-- Seccion movil 4 -->
+
+<div class="container-fluid d-block d-sm-none">
+    <div class="row">
+        <div class="col-2">
+            
+        </div>
+
+        <div class="col-8">
+            <div class="row" >
+                <div class="col-2" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-10" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 4vw;font-weight: bold">
+                        <p align="justify" style="padding-left:5%;padding-right: 40%">Consulta desde cualquier parte.</p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:4vw;color:#002C66;padding-right: 5%">
+                Elige cualquier dispositivo
+                para tus consultas de
+                Clinitec, ya sea
+                computadora, celular o
+                tablet.
+                </p>
+            </font>
+
+
+
+        </div>
+        <div class="col-2">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            
+        </div>
+
+        <div class="col-8">
+            <div class="row" >
+                <div class="col-2" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-10" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 4vw;font-weight: bold">
+                        <p align="justify" style="padding-left:5%;padding-right: 15%">Integra la información de tus clientes.</p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:4vw;color:#002C66;padding-right: 5%">
+                Desde el expediente médico hasta
+                consultas, recetas y estudios; todo en
+                tu sistema Clinitec.
+                </p>
+            </font>
+
+
+
+        </div>
+        <div class="col-2">
+            
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-2">
+            
+        </div>
+
+        <div class="col-8">
+            <div class="row" >
+                <div class="col-2" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-10" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 4vw;font-weight: bold">
+                        <p align="justify" style="padding-left:5%;padding-right: 15%">Administra mejor tu consultorio.</p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:4vw;color:#002C66;padding-right: 5%">
+                Visualiza la ocupación de tu
+                calendario y optimiza la
+                agenda y consultorios.
+                </p>
+            </font>
+
+
+
+        </div>
+        <div class="col-2">
+            
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-2">
+            
+        </div>
+
+        <div class="col-8">
+            <div class="row" >
+                <div class="col-2" style="padding: 0px">
+                    <img src="{% static 'img/iconos/lupa.svg' %}" class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-10" style="padding: 0px;padding-top: 1vh">
+                    <font style="color:#0AA5FF;font-size: 4vw;font-weight: bold">
+                        <p align="justify" style="padding-left:5%;padding-right: 15%">Agenda médica en linea.</p>
+                    </font>
+                </div>
+            </div>
+            <font>
+                <p align="justify" style="font-size:4vw;color:#002C66;padding-right: 5%">
+                    Además de las citas
+                    agendadas por pacientes
+                    Clinitec tú puedes crear citas
+                    manualmente para usar un
+                    sólo calendario.
+                </p>
+            </font>
+
+
+
+        </div>
+        <div class="col-2">
+            
+        </div>
+    </div> 
+
+
+
+</div>
+
+<!-- Seccion movil 4 -->
+
+<!--Seccion 5-->
+<div class="container-fluid d-none d-sm-block" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-6" style="padding: 0px;padding-top: 2.5vh;padding-left: 5vw">
+            
+            <b>
+                <p  style="padding-left: 2vw;font-size:2.5vw;font-weight:bold;color:#002C66;line-height: normal;margin-top: 10vh">
+                    Sus <font style="color:#0AA5FF">datos</font> están <font style="color:#0AA5FF">seguros</font>
+
+                    <br>        
+                    <font style="color:#002C66">con nosotros</font>
+                </p>
+            </b>
+
+
+            <p style="padding-left: 2vw;font-size:1.25vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;line-height: 1px">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Todos los datos que agregue son<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exclusivamente suyos
+            </p>
+
+            <p style="padding-left: 2vw;font-size:1.25vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;line-height: 1px">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Su información está encriptada y protegida
+            </p>
+
+            <p style="padding-left: 2vw;font-size:1.25vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;line-height: 1px">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Clinitec no compartirá ni venderá sus datos
+            </p>
+
+        </div>
+
+        <div class="col-sm-6" style="padding: 0px">
+            <img src="{% static 'img/doctora.png' %}" style="width: 100%" class="img-responsive">
+        </div>
+    </div>
+</div>
+
+<!--Seccion 5-->
+
+<!-- Seccion movil 5-->
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px">
+                <b>
+                <p  style="text-align: center;padding-left: 5vw;padding-right:5vw;font-size:6vw;font-weight:bold;color:#002C66;line-height: normal;margin-top: 10vh">
+                    Sus <font style="color:#0AA5FF">datos</font> y los de sus pacientes están <font style="color:#0AA5FF">seguros</font>
+                    <br>        
+                    <font style="color:#002C66">con nosotros</font>
+                </p>
+            </b>
+
+            <center>
+            <p style="text-align: left;padding-left: 10vw;font-size:4vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 10vh;">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Todos los datos que agregue<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; son exclusivamente suyos
+            </p>
+
+            <p style="text-align: left;padding-left: 10vw;font-size:4vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 5vh;">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Su información está encriptada y <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protegida
+            </p>
+
+            <p style="text-align: left;padding-left: 10vw;font-size:4vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 5vh;">
+                <img src="{% static 'img/checkbox_checked.svg' %}" style="width: 10%" class="img-responsive">Clinitec no compartirá ni venderá <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sus datos
+            </p>
+            </center>
+
+    <div class="container-fluid" style="padding: 0px;margin-top: -12.5vh">
+     <img src="{% static 'img/doctora.png' %}" style="width: 100%" class="img-responsive">
+        
+    </div>
+
+</div>
+
+<!-- Seccion movil 5-->
+
+<!--Seccion 6-->
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-4" style="padding: 0px;">
+            <img src="{% static 'img/esquina.png' %}" class="img-responsive" style="width: 100%">
+        </div>
+        <div class="col-sm-8" style="padding:0px;">
+            <img src="{% static 'img/telefonos.png' %}" class=  "img-responsive" style="width: 100%;margin-left: -7.5vw;margin-top: 20vh">
+        </div>
+    </div>
+
+
+    <center>
+        <button class="btn btn-danger" style="border-radius: 60px;padding-right: 10vw;padding-left: 10vw;padding-top:-10vh;margin-bottom: 10vh"><font style="font-size: 2vw;color:white">Ver mas</font></button>
+    </center>
+
+</div>
+
+
+
+<!--Seccion 6-->
+
+
+<!--Seccion movil 6-->
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px;">
+    <img src="{% static 'img/esquina.png' %}" class="img-responsive" style="width: 25%;position: absolute;">
+    <center>
+        <font style="font-size: 4vw;font-weight: bold;color: #162884;margin-top: 10vh"><br>¿Cómo funciona?</font>
+        
+    </center>
+
+
+    <img src="{% static 'img/telefonos.png' %}" class=  "img-responsive" style="width: 100%;margin-top: 10vh">
+
+
+    <center>
+        <button class="btn btn-info" style="width: 75%;border-radius: 60px;padding-right: 10vw;padding-left: 10vw;height:5vh;margin-bottom: 5vh"><font style="font-size: 4vw;color:white;font-weight: bold">Ver más</font></button>
+    </center>
+
+</div>
+
+
+
+<!--Seccion movil 6-->
+
+
+
+<!--Seccion 7-->
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px;background-color: #14B9FF">
+
+    <div class="row" style="padding: 0px">
+        <div class="col-sm-5" style="padding: 0px">
+            
+        </div>
+        <div class="col-sm-2" style="padding:0px;margin-top: 5vh;margin-bottom:5vh">
+                     <div class="custom-switch custom-switch-label-status pl-0" style="margin-left:5vw;margin-top: 10vh">
+              <input class="custom-switch-input" id="example_06" type="checkbox">
+              <label class="custom-switch-btn" for="example_06"></label>
+            </div>   
+
+        </div>
+
+        <div class="col-sm-5" style="padding: 0px">
+            
+        </div>
+    </div>
+
+
+
+    <div class="row" style="padding: 0px">
+        <div class="col-sm-5" style="padding: 0px">
+            
+        </div>
+        <div class="col-sm-2" style="padding: 0px;padding-top: 2.5vh;background-color: white;margin-bottom:10vh;height: 75vh">
+            <center>
+                <b>
+                    <p  style="font-size:2.5vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 2.5vh">
+                        Precios 
+
+                    </p>
+                </b>
+                
+            </center>
+
+
+        </div>
+
+        <div class="col-sm-5" style="padding: 0px">
+            
+        </div>
+    </div>
+</div>
+
+<!--Seccion 7-->
+
+
+
+<!--Seccion movil 7-->
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px;background-color: #14B9FF;padding-bottom: 10vh;padding-top: .5vh">
+
+    <div class="container-fluid" >
+        <center>
+            <div class="custom-switch custom-switch-label-status pl-0" style="margin-top: 10vh">
+                <input class="custom-switch-input" id="example_06" type="checkbox">
+                <label class="custom-switch-btn" for="example_06"></label>
+            </div>  
+            
+        </center>
+    </div>
+
+    <div class="container-fluid" style="margin-top: 10vh;padding: 0px;padding-top: 2.5vh;background-color: white;margin-bottom:10vh;height: 40vh;width: 50%">
+        <center>
+            <b>
+                <p  style="font-size:4vw;font-weight:bold;color:#0AA5FF;line-height: normal;margin-top: 2.5vh">
+                    Precios 
+
+                </p>
+            </b>
+            <br><br>
+            <br>
+                <p  style="font-size:2vw;color:#0AA5FF;line-height: normal;margin-top: 15vh">
+                    Ver más 
+
+                </p>
+        </center>
+
+
+    </div>
+
+
+
+</div>
+
+<!--Seccion movil 7-->
+
+
+<!--Seccion 8-->
+
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px;height: 45vh; background-image: linear-gradient(#002C66,#0AA5FF);">
+    <div class="row">
+        <div class="col-sm-1" style="padding: 0px">
+            
+        </div>
+        <div class="col-sm-2" style="padding: 0px;padding-top: 5vh">
+            <img src="{% static 'img/logo_blanco.png' %}" style="width: 75%" class="img-responsive">
+            <font color="whie" style="color:white;font-size: 1vw">
+                <b>
+                    <font style="font-size: 1.25vw">
+                        Servicios
+                    </font>
+                </b>
+                <br>
+                Quienes somos
+                <br>
+                Contacto
+                <br>
+                Empleo Nuevas posiciones
+                <br>
+                Términos y condiciones
+                <br>
+                Prensa
+            </font>
+        </div>
+        <div class="col-sm-2" style="padding: 0px;padding-top: 9vh">
+
+            <font color="whie" style="color:white;font-size: 1vw">
+                <b>
+                    <font style="font-size: 1.25vw">
+                    Para profesionales                        
+                    </font>
+                </b>
+                <br>
+                Para especialistas
+                <br>
+                Planes y precios
+                <br>
+                Recursos
+                <br>
+                Widget para su web
+                <br>
+                Para clínicas
+                <br>
+                Centro de ayuda
+                <br>
+                Condiciones del perfil Premium
+                <br>
+                Consulta en linea nuevo
+            </font>
+        </div>
+
+        <div class="col-sm-3" style="padding: 0px">
+            
+        </div>
+
+        <div class="col-sm-4" style="padding: 0px">
+            <img src="{% static 'img/lado_derecho.png' %}" class="img-responsive" style="width: 100%;height: 45vh">
+        </div>        
+    </div>
+</div>
+<!--Seccion 8-->
+
+<!-- Seccion movil 8 -->
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px;height: 45vh; background-image: linear-gradient(#002C66,#0AA5FF);">
+    <div class="row" style="display: -webkit-inline-box;width:100vw">
+
+        <div class="col-6" style="padding: 0px;padding-top: 5vh;padding-left: 7.5vw">
+            <img src="{% static 'img/logo_blanco.png' %}" style="width: 50%" class="img-responsive">
+            <br>
+            <font color="white" style="color:white;font-size: 3vw">
+                <b>
+                    <font style="font-size: 3vw">
+                        Servicios
+                    </font>
+                </b>
+                <br>
+                Quienes somos
+                <br>
+                Contacto
+                <br>
+                Empleo Nuevas 
+                <br>
+                posiciones
+                <br>
+                Términos y condiciones
+                <br>
+                Prensa
+            </font>
+        </div>
+        <div class="col-6" style="padding: 0px;padding-top: 9vh">
+
+            <font color="white" style="color:white;font-size: 3vw">
+                <b>
+                    <font style="font-size: 3vw">
+                    Para profesionales                        
+                    </font>
+                </b>
+                <br>
+                Para especialistas
+                <br>
+                Planes y precios
+                <br>
+                Recursos
+                <br>
+                Widget para su web
+                <br>
+                Para clínicas
+                <br>
+                Centro de ayuda
+                <br>
+                Condiciones del perfil Premium
+                <br>
+                Consulta en linea nuevo
+            </font>
+        </div>
+
+
+      
+    </div>
+</div>
+
+
+<!-- Seccion movil 8 -->
+
+
+
+<!--Seccion 9-->
+
+
+<div class="container-fluid d-none d-sm-block" style="padding: 0px;background-color:blue;padding-bottom: 1vh;padding-bottom:1vh">
+    <center>
+        <font color="white">www.clinitec.com.mx &nbsp;&nbsp;&nbsp;2020 - Encuentra especialista ideal para ti</font>
+    </center>
+</div>
+
+<!--Seccion 9-->
+
+<!--Seccion 9-->
+
+
+<div class="container-fluid d-block d-sm-none" style="padding: 0px;background-color:blue;padding-bottom: 1vh;padding-bottom:1vh">
+    <center>
+        <font color="white" style="font-size: 3vw">www.clinitec.com.mx &nbsp;&nbsp;&nbsp;2020 - Encuentra especialista ideal para ti</font>
+    </center>
+</div>
+
+<!--Seccion 9-->
+
+</body>
+</html>
